@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        'hero-bg-mobile': "url('../public/background-mobile.jpg')",
+        'hero-bg-desktop': "url('../public/background-desktop.jpg')",
+      }
     },
   },
   plugins: [],
