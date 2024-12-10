@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState } from "react";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -12,6 +12,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 import TravellerData from "../lib/TravellerData";
 import {Playfair_Display} from 'next/font/google'
+import rating from '../../public/Rating.png'
 
 const playfair = Playfair_Display({
   weight: '400',
@@ -61,7 +62,25 @@ const TravellersExperienceSwiper = () => {
         {TravellerData.map((data, index) => (
           <SwiperSlide key={index} 
           style={{ width: `${slideWidth}px`,  }}>
-            <div>
+
+              <div className=" -mb-12 pl-5 md:pl-10  ">
+                <Image src={data.src} alt="pix" width={100} height={100} className="rounded-[100px]" />
+              </div>
+
+            <div className="bg-[#F5F6F7] rounded-xl px-5 pt-[60px] pb-[32px] md:px-10 md:pb-10">
+              
+              
+
+              <div className="text-[#767E86] grid gap-4">
+                <p className="text-lg">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness.</p>
+
+                <Image src={rating} alt="pix" />
+
+                <div>
+                  <p className={`${playfair.className} text-2xl`}>{data.name}</p>
+                  <p className="text-lg">{data.title}</p>
+                </div>
+              </div>
                 
             </div>
                 
