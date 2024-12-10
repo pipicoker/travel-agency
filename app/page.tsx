@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Header from "./ui/Header";
 import Hero from "./ui/Hero";
 import {Rubik} from 'next/font/google'

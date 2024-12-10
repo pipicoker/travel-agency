@@ -1,6 +1,6 @@
 import React from 'react'
 interface Props {
-    mobileBtn : Boolean
+    mobileBtn : boolean
 }
 
 const SwiperMobileBtn:React.FC<Props> = ({mobileBtn}) => {
