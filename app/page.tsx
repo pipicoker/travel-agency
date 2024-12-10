@@ -27,19 +27,22 @@ export default function Home() {
        
       </div>
 
+    <div className="bg-[#FFFFFF]">
       <PopularDestination />
-      <SpecialOffer />
-      <Blog />
-      <TripPlanners />
-      <DestinationGallery />
-      <TravellersExperience />
+        <SpecialOffer />
+        <Blog />
+        <TripPlanners />
+        <DestinationGallery />
+        <TravellersExperience />
 
-      <div className="relative">
-        <div className="-mb-12 md:-mb-16 ">
-          <Newsletter />
+        <div className="relative">
+          <div className="-mb-12 md:-mb-16 ">
+            <Newsletter />
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+    </div>
+      
       
       
     </div>
