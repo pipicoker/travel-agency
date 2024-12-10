@@ -31,7 +31,7 @@ const Footer = () => {
                 <p className='text-2xl md:text-base lg:text-2xl font-medium text-[#FFFFFF]'>Follow us on</p>
                 <div className='flex space-x-6 md:space-x-4 lg:space-x-6 items-center pt-4'>
                     {socials.map((data, index) => (
-                        <Image src={data} alt='logo' />
+                        <Image src={data} alt='logo' key={index}/>
                     ) )}
                 </div>
             </div>
