@@ -4,8 +4,6 @@ import PopularDestinationSwiper from './PopularDestinationSwiper'
 import Heading from './Heading';
 import SwiperMobileBtn from './SwiperMobileBtn';
 
-
-
 const PopularDestination = () => {
   
  
