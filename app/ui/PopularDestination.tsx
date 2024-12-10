@@ -1,14 +1,10 @@
 "use client"
-import React, { useEffect, useRef } from 'react';
-import {Playfair_Display} from 'next/font/google'
+import React from 'react';
 import PopularDestinationSwiper from './PopularDestinationSwiper'
 import Heading from './Heading';
 import SwiperMobileBtn from './SwiperMobileBtn';
 
-const playfair = Playfair_Display({
-    weight: '400',
-    subsets: ['latin']
-})
+
 
 const PopularDestination = () => {
   

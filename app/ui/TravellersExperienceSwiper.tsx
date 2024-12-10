@@ -41,14 +41,14 @@ const TravellersExperienceSwiper = () => {
       
       <Swiper
         modules={[Navigation,  Scrollbar, A11y]}
-        spaceBetween={50}
+        spaceBetween={20}
         slidesPerView="auto"
-        // breakpoints={{
-        //   // Adjust spacing for different screen sizes if needed
-        //   320: { spaceBetween: 20 },
-        //   768: { spaceBetween: 32 },
-        //   1024: { spaceBetween: 32 },
-        // }}
+        breakpoints={{
+          // Adjust spacing for different screen sizes if needed
+          320: { spaceBetween: 20 },
+          768: { spaceBetween: 32 },
+          1024: { spaceBetween: 32 },
+        }}
         navigation={{
           prevEl: ".custom-prev",
           nextEl: ".custom-next",

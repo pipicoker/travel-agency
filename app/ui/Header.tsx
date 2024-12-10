@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import { AiOutlineClose } from 'react-icons/ai';
 import Image from 'next/image'
-import Link from 'next/link'
 import logo from '../../public/Logo.png'
 import NavData from '../lib/NavData'
 
@@ -54,22 +53,41 @@ const Header = () => {
         <button className='bg-[#FF7757] px-6 py-[16px] lg:px-8 lg:py-[20px] rounded-xl'>Sign Up</button>
       </div>
 
-      <div className={` md:hidden items-end md:space-x-8 pt-12  text-left  ${navState ? 'block fixed top-0 h-screen w-screen  bg-[#F5F5F5] z-50 ease-in duration-500 ' : 'fixed top-[-100%] ease-out duration-100 '}`}>
-        <div className='flex justify-end px-12 text-pry text-4xl ' onClick={() => setNavState(false)}>
-          <AiOutlineClose  />
+      <div
+        className={`md:hidden items-end md:space-x-8 pt-12 pb-6 text-left ${
+          navState
+            ? 'block fixed top-0 right-0 h-full w-screen bg-[#172432] z-50 ease-in duration-500 transform translate-x-0'
+            : 'fixed top-0 right-0 h-full w-screen bg-[#172432] z-50 ease-out duration-300 transform translate-x-full'
+        }`}
+          >
+        {/* Close button */}
+        <div
+          className="flex justify-end px-12 text-[#FFFFFF] text-4xl"
+          onClick={() => setNavState(false)}
+        >
+          <AiOutlineClose />
         </div>
-            <ul className='flex flex-col space-y-6 divide-y divide-pry '>
-              {NavData.map((data, index) => (
-                <a href={data.path as string}
-                key={index}
-                className={` text-lg font-semibold cursor-pointer pl-8 pt-6 `
-                  
-                } ><li>{data.title}</li></a>
-              )
-                
-              )}
-            </ul>
-          </div>
+
+        {/* Navigation Items */}
+        <ul className="flex flex-col space-y-6 divide-y divide-pry">
+          {NavData.map((data, index) => (
+            <a
+              href={data.path as string}
+              key={index}
+              className="text-lg font-semibold cursor-pointer pl-8 pt-6 text-[#FFFFFF]"
+            >
+              <li>{data.title}</li>
+            </a>
+          ))}
+        </ul>
+
+        <div className='mt-8 grid gap-6 px-8 md:items-center text-[#FFFFFF] lg:text-xl'>
+        <button>Login</button>
+
+        <button className='bg-[#FF7757] px-6 py-[16px] rounded-xl'>Sign Up</button>
+      </div>
+      </div>
+
 
       
     </header>

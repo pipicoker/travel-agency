@@ -1,7 +1,6 @@
 "use client"
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import {Playfair_Display} from 'next/font/google'
-import PopularDestinationSwiper from './PopularDestinationSwiper'
 import SpecialOfferSwiper from './SpecialOfferSwiper';
 import SwiperMobileBtn from './SwiperMobileBtn';
 

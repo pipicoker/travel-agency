@@ -41,13 +41,13 @@ const DestinationGallerySwipper = () => {
       >
 
         {gallery.map((data, index) => (
-          <SwiperSlide key={index} 
+          <SwiperSlide key={index} style={{ overflow: "hidden"   }}
           >
-            <div className=''>
+            <div className='relative '>
               <Image 
               src={data} 
               alt='picture'
-              className={` w-full h-[320px] sm:h-[351px] md:h-[469px] lg:h-[570px] rounded-[26px]`}/>
+              className={` w-full h-[320px] sm:h-[351px] md:h-[469px] lg:h-[570px] rounded-[26px] transition-transform duration-300 ease-in-out hover:-translate-y-24`} />
 
               
 

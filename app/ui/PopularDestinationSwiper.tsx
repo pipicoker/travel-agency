@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState } from "react";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';

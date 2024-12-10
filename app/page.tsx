@@ -8,6 +8,8 @@ import Blog from "./ui/Blog";
 import TripPlanners from "./ui/TripPlanners";
 import DestinationGallery from "./ui/DestinationGallery";
 import TravellersExperience from "./ui/TravellersExperience";
+import Newsletter from "./ui/Newsletter";
+import Footer from "./ui/Footer";
 
 const rubik = Rubik({
     weight: '400',
@@ -18,9 +20,12 @@ export default function Home() {
   return (
     <div className={rubik.className}>
       
-      <div className="bg-hero-bg-mobile md:bg-hero-bg-desktop px-4 lg:px-[90px]">
-        <Header />
-        <Hero />
+      <div className="bg-hero-bg-mobile md:bg-hero-bg-desktop ">
+        <div className="bg-[#000000] bg-opacity-30 px-4 lg:px-[90px]">
+          <Header />
+          <Hero />
+        </div>
+       
       </div>
 
       <PopularDestination />
@@ -29,6 +34,15 @@ export default function Home() {
       <TripPlanners />
       <DestinationGallery />
       <TravellersExperience />
+
+      <div className="relative">
+        <div className="-mb-12 md:-mb-16 ">
+          <Newsletter />
+        </div>
+        <Footer />
+      </div>
+      
+      
     </div>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -11,20 +11,20 @@ import Image from "next/image";
 import TripPlannersData from "../lib/TripPlannersData";
 
 const TripPlannersSwiper = () => {
-  const [slideWidth, setSlideWidth] = useState(300);
+  // const [slideWidth, setSlideWidth] = useState(300);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) setSlideWidth(496);
-      else if (window.innerWidth >= 768) setSlideWidth(496);
-      else if (window.innerWidth >= 640) setSlideWidth(728);
-      else setSlideWidth(288);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (window.innerWidth >= 1024) setSlideWidth(496);
+  //     else if (window.innerWidth >= 768) setSlideWidth(496);
+  //     else if (window.innerWidth >= 640) setSlideWidth(728);
+  //     else setSlideWidth(288);
+  //   };
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   handleResize();
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   return (
     <div className="">

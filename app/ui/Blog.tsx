@@ -14,10 +14,10 @@ const Blog = () => {
     <div className='px-4 lg:px-[90px]  pb-[80px] md:pb-[100px] lg:pb-[140px]'>
         <Heading heading='Our Blog' description='An insight to the incredible experience in the world' buttons= {false}/>
 
-        <div className='mt-[100px] grid md:grid-cols-2 lg:grid-cols-5 md:items-center gap-8'>
-            <Image src={blogPix} alt='Blog picture' className='lg:col-span-3 h-[314px] sm:h-[555px] md:h-[686px]  rounded-[26px]'/>
+        <div className='mt-[100px] grid md:grid-cols-2  md:items-center gap-8'>
+            <Image src={blogPix} alt='Blog picture' className=' h-[314px] sm:h-[555px]  rounded-[26px] '/>
 
-            <div className='lg:col-span-2 text-[#172432] grid gap-6'>
+            <div className=' text-[#172432] grid gap-6'>
                 <p className={`${playfair.className} text-[40px] `}>Beautiful Italy
                 Let’s travel</p>
 
