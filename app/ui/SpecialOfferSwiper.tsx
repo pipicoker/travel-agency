@@ -67,7 +67,9 @@ const SpecialOfferSwiper = () => {
         {SpecialOfferData.map((data, index) => (
           <SwiperSlide key={index} 
           >
-            <div className=''>
+            <div 
+            
+            className=''>
               <Image 
               src={data.src} 
               alt='picture'

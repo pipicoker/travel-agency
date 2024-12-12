@@ -67,7 +67,9 @@ const PopularDestinationSwiper = () => {
         {PopularDestinationData.map((data, index) => (
           <SwiperSlide key={index} 
           style={{ width: `${slideWidth}px`,  }}>
-            <div className='relative w-full'>
+            <motion.div 
+            whileHover={{ scale: 0.9, rotate: 3 }}
+            className='relative w-full'>
               <Image 
               src={data.src} 
               alt='picture'
@@ -87,7 +89,7 @@ const PopularDestinationSwiper = () => {
                 </div>
                 
               </div>
-            </div>
+            </motion.div>
           </SwiperSlide>
         ))}
       </Swiper>
