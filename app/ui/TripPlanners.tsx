@@ -5,7 +5,7 @@ import Image from 'next/image'
 import rating from '../../public/Rating.png'
 import {Playfair_Display} from 'next/font/google'
 import TripPlannersSwiper from './TripPlannersSwiper'
-
+import {motion} from 'motion/react'
 
 const playfair = Playfair_Display({
     weight: '400',
@@ -14,7 +14,11 @@ const playfair = Playfair_Display({
 
 const TripPlanners = () => {
   return (
-    <div className='px-4 sm:pr-12 md:pr-0  lg:px-[90px]  pb-[80px] md:pb-[100px] lg:pb-[140px] grid lg:grid-cols-5 gap-8 lg:gap-20 lg:items-center '>
+    <motion.div 
+    initial={{ opacity: 0, y: 50 }} 
+    whileInView={{ opacity: 1, y: 0 }} 
+    transition={{ duration: 1,  }}
+    className='px-4 sm:pr-12 md:pr-0  lg:px-[90px]  pb-[80px] md:pb-[100px] lg:pb-[140px] grid lg:grid-cols-5 gap-8 lg:gap-20 lg:items-center '>
 
         <div className='grid md:col-span-2  gap-8'>
 
@@ -32,7 +36,10 @@ const TripPlanners = () => {
 
         <div className='grid lg:hidden gap-10 text-[#172432]'>
             {TripPlannersData.map((data, index) => (
-                <div key={index}>
+                <motion.div key={index}
+                initial={{ opacity: 0, y: 50 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 1,  }}>
                     <Image src={data.src} alt='picture of the place' className='h-[320px] sm:h-[350px] rounded-[26px] '/>
 
                     <div className='pt-3 grid gap-3'>
@@ -52,7 +59,7 @@ const TripPlanners = () => {
                         
                     </div>
 
-                </div>
+                </motion.div>
             ))}
         </div>
 
@@ -61,7 +68,7 @@ const TripPlanners = () => {
             <TripPlannersSwiper />
         </div>
         
-    </div>
+    </motion.div>
   )
 }
 

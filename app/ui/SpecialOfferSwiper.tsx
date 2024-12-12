@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import rating from '../../public/Rating.png'
+import {motion} from 'motion/react'
 
 import { Navigation,  Scrollbar, A11y } from 'swiper/modules';
 
@@ -37,7 +38,11 @@ const SpecialOfferSwiper = () => {
 //   }, []);
 
   return (
-    <div className="mt-[100px]">
+    <motion.div 
+    initial={{ opacity: 0, x: 50 }} 
+    whileInView={{ opacity: 1, x: 0 }} 
+    transition={{ duration: 1,  }}
+    className="mt-[100px]">
       
       <Swiper
         modules={[Navigation,  Scrollbar, A11y]}
@@ -90,7 +95,7 @@ const SpecialOfferSwiper = () => {
         ))}
       </Swiper>
 
-    </div>
+    </motion.div>
   )
 }
 

@@ -9,6 +9,7 @@ import { Navigation, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import TripPlannersData from "../lib/TripPlannersData";
+import {motion} from 'motion/react'
 
 const TripPlannersSwiper = () => {
   // const [slideWidth, setSlideWidth] = useState(300);
@@ -27,7 +28,11 @@ const TripPlannersSwiper = () => {
   // }, []);
 
   return (
-    <div className="">
+    <motion.div 
+    initial={{ opacity: 0, x: 50 }} 
+    whileInView={{ opacity: 1, x: 0 }} 
+    transition={{ duration: 1,  }}
+    className="">
       <Swiper
         modules={[Navigation, Scrollbar, A11y]}
         spaceBetween={32}
@@ -72,7 +77,7 @@ const TripPlannersSwiper = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </motion.div>
   );
 };
 

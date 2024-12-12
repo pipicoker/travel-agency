@@ -1,3 +1,4 @@
+'use client'
 import Header from "./ui/Header";
 import Hero from "./ui/Hero";
 import {Rubik} from 'next/font/google'
@@ -10,6 +11,7 @@ import TravellersExperience from "./ui/TravellersExperience";
 import Newsletter from "./ui/Newsletter";
 import Footer from "./ui/Footer";
 
+
 const rubik = Rubik({
     weight: '400',
     subsets: ['latin']
@@ -17,7 +19,10 @@ const rubik = Rubik({
 
 export default function Home() {
   return (
-    <div className={rubik.className}>
+    <div 
+    
+    
+    className={rubik.className}>
       
       <div className="bg-hero-bg-mobile md:bg-hero-bg-desktop ">
         <div className="bg-[#000000] bg-opacity-30 px-4 lg:px-[90px]">
@@ -27,7 +32,9 @@ export default function Home() {
        
       </div>
 
-    <div className="bg-[#FFFFFF]">
+    <div 
+    
+    className="bg-[#FFFFFF]">
       <PopularDestination />
         <SpecialOffer />
         <Blog />

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Suspense } from "react";
+import Loading from "./loading";
 // import Header from "./ui/Header";
 
 // const geistSans = localFont({
@@ -30,7 +32,8 @@ export default function RootLayout({
       > */}
       <body>
         {/* <Header /> */}
-        {children}
+        <Suspense fallback={<Loading />}>{children}</Suspense>
+        
       </body>
     </html>
   );

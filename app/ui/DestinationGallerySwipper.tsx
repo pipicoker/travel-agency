@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import Image from 'next/image';
-
+import {motion} from 'motion/react'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -17,7 +17,10 @@ import gallery4 from "../../public/gallery-4.jpg"
 const DestinationGallerySwipper = () => {
     const gallery = [gallery1, gallery2, gallery3, gallery4, gallery1, gallery2]
   return (
-    <div>
+    <motion.div 
+    initial={{ opacity: 0, x: 50 }} 
+    whileInView={{ opacity: 1, x: 0 }} 
+    transition={{ duration: 1,  }}>
         <div className="mt-[100px]">
       
       <Swiper
@@ -58,7 +61,7 @@ const DestinationGallerySwipper = () => {
       </Swiper>
 
     </div>
-    </div>
+    </motion.div>
   )
 }
 

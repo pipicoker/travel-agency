@@ -3,6 +3,7 @@ import React from 'react';
 import {Playfair_Display} from 'next/font/google'
 import SpecialOfferSwiper from './SpecialOfferSwiper';
 import SwiperMobileBtn from './SwiperMobileBtn';
+import {motion} from 'motion/react'
 
 const playfair = Playfair_Display({
     weight: '400',
@@ -11,7 +12,11 @@ const playfair = Playfair_Display({
 
 const SpecialOffer = () => {
   return (
-    <div className='px-4 lg:px-[90px]  pb-[80px] md:pb-[100px] lg:pb-[140px]'>
+    <motion.div 
+    initial={{ opacity: 0, y: 50 }} 
+    whileInView={{ opacity: 1, y: 0 }} 
+    transition={{ duration: 1,  }}
+    className='px-4 lg:px-[90px]  pb-[80px] md:pb-[100px] lg:pb-[140px]'>
         <div>
             <div className='grid sm:justify-end'>
                 <h2 className={`${playfair.className} text-[54px] text-[#172432] `}>Special Offers</h2>
@@ -47,7 +52,7 @@ const SpecialOffer = () => {
       <SpecialOfferSwiper />
 
       <SwiperMobileBtn mobileBtn={true} />
-  </div>
+  </motion.div>
   )
 }
 

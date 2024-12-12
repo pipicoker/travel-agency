@@ -3,6 +3,7 @@ import Heading from './Heading'
 import blogPix from "../../public/blogPix.jpg"
 import Image from 'next/image'
 import {Playfair_Display} from 'next/font/google'
+import {motion} from 'motion/react'
 
 const playfair = Playfair_Display({
     weight: '400',
@@ -11,7 +12,11 @@ const playfair = Playfair_Display({
 
 const Blog = () => {
   return (
-    <div className='px-4 lg:px-[90px]  pb-[80px] md:pb-[100px] lg:pb-[140px]'>
+    <motion.div 
+    initial={{ opacity: 0, y: 50 }} 
+    whileInView={{ opacity: 1, y: 0 }} 
+    transition={{ duration: 1,  }}
+    className='px-4 lg:px-[90px]  pb-[80px] md:pb-[100px] lg:pb-[140px]'>
         <Heading heading='Our Blog' description='An insight to the incredible experience in the world' buttons= {false}/>
 
         <div className='mt-[100px] grid md:grid-cols-2  md:items-center gap-8'>
@@ -35,7 +40,7 @@ const Blog = () => {
 
             
         </div>
-    </div>
+    </motion.div>
   )
 }
 
