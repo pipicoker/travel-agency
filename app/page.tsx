@@ -24,7 +24,7 @@ export default function Home() {
     
     className={rubik.className}>
       
-      <div className="bg-hero-bg-mobile md:bg-hero-bg-desktop ">
+      <div className="w-screen bg-hero-bg-mobile md:bg-hero-bg-desktop bg-no-repeat bg-cover">
         <div className="bg-[#000000] bg-opacity-30 px-4 lg:px-[90px]">
           <Header />
           <Hero />

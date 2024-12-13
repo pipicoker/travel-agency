@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <header className=' py-6 px-4 md:flex justify-between items-center'>
       <div className='flex justify-between'>
-        <Image src={logo} alt='logo'/>
+        <Image src={logo} alt='logo' priority/>
 
         <div onClick={navControl} className='md:hidden'>
           <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +50,7 @@ const Header = () => {
       <div className='hidden md:flex md:gap-9 md:items-center text-[#FFFFFF] lg:text-xl'>
         <button>Login</button>
 
-        <button className='bg-[#FF7757] px-6 py-[16px] lg:px-8 lg:py-[20px] rounded-xl'>Sign Up</button>
+        <button className='bg-[#FF7757] text-white px-6 py-[16px] lg:px-8 lg:py-[20px] rounded-xl'>Sign Up</button>
       </div>
 
       <div
@@ -76,7 +76,7 @@ const Header = () => {
               key={index}
               className="text-lg font-semibold cursor-pointer pl-8 pt-6 text-[#FFFFFF]"
             >
-              <li>{data.title}</li>
+              {data.title}
             </a>
           ))}
         </ul>
@@ -84,7 +84,7 @@ const Header = () => {
         <div className='mt-8 grid gap-6 px-8 md:items-center text-[#FFFFFF] lg:text-xl'>
         <button>Login</button>
 
-        <button className='bg-[#FF7757] px-6 py-[16px] rounded-xl'>Sign Up</button>
+        <button className='bg-[#FF7757] text-white px-6 py-[16px] rounded-xl'>Sign Up</button>
       </div>
       </div>
 

@@ -12,23 +12,23 @@ const HeroBooking = () => {
             <div className='p-5  grid md:grid-cols-2 xl:grid-cols-4 gap-10  md:items-center 2xl:pr-[100px] '>
 
                 <div className='grid gap-3'>
-                    <label htmlFor="" className='text-[#767E86] text-sm'>DESTINATION</label>
-                    <input type="text" className='bg-transparent border-0 border-b-2 border-b-[#000000] text-sm text-[#172432]'/>
+                    <label htmlFor="destination" className='text-[#767E86] text-sm'>DESTINATION</label>
+                    <input id='destination' type="text" className='bg-transparent border-0 border-b-2 border-b-[#000000] text-sm text-[#172432]'/>
                 </div>
                 
                 <div className='grid gap-3'>
-                    <label htmlFor="" className='text-[#767E86] text-sm'>PERSON</label>
-                    <input type="number" className='bg-transparent border-0 border-b-2 border-b-[#000000] text-sm text-[#172432]'/>
+                    <label htmlFor="person" className='text-[#767E86] text-sm'>PERSON</label>
+                    <input id='person' type="number" className='bg-transparent border-0 border-b-2 border-b-[#000000] text-sm text-[#172432]'/>
                 </div>
 
                 <div className='grid gap-3'>
-                    <label htmlFor="" className='text-[#767E86] text-sm'>CHECK IN</label>
-                    <input type="date" className='bg-transparent border-0 border-b-2 border-b-[#000000] text-sm text-[#172432]'/>
+                    <label htmlFor="in" className='text-[#767E86] text-sm'>CHECK IN</label>
+                    <input id='in' type="date" className='bg-transparent border-0 border-b-2 border-b-[#000000] text-sm text-[#172432]'/>
                 </div>
 
                 <div className='grid gap-3'>
-                    <label htmlFor="" className='text-[#767E86] text-sm'>CHECK OUT</label>
-                    <input type="date" className='bg-transparent border-0 border-b-2 border-b-[#000000] text-sm text-[#172432]'/>
+                    <label htmlFor="out" className='text-[#767E86] text-sm'>CHECK OUT</label>
+                    <input id='out' type="date" className='bg-transparent border-0 border-b-2 border-b-[#000000] text-sm text-[#172432]'/>
                 </div>
             </div>
             
