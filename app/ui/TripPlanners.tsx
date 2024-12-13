@@ -18,6 +18,7 @@ const TripPlanners = () => {
     initial={{ opacity: 0, y: 50 }} 
     whileInView={{ opacity: 1, y: 0 }} 
     transition={{ duration: 1,  }}
+    id='planners'
     className='px-4 sm:pr-12 md:pr-0  lg:px-[90px]  pb-[80px] md:pb-[100px] lg:pb-[140px] grid lg:grid-cols-5 gap-8 lg:gap-20 lg:items-center '>
 
         <div className='grid md:col-span-2  gap-8'>

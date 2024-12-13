@@ -1,28 +1,28 @@
 type NavDataItem = {
     title: string;
-    path?: string;
+    path: string;
 }
 
 const NavData: NavDataItem[] = [
     {
         title: "Home",
-        path: "/"
+        path: "#home"
     },
     {
         title: "Explore",
-        path: "/productpage"
+        path: "#popular"
     },
     {
         title: "Travel",
-        path: "/Aboutpage"
+        path: "#special"
     },
     {
         title: "Blog",
-        path: "/Contactpage"
+        path: "#blog"
     },
     {
         title: "Pricing",
-        path: "/Contactpage"
+        path: "#planners"
     },
 ]
 

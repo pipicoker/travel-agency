@@ -13,6 +13,7 @@ const PopularDestination = () => {
     initial={{ opacity: 0, y: 50 }} 
     whileInView={{ opacity: 1, y: 0 }} 
     transition={{ duration: 1,  }} 
+    id='popular'
     className='px-4 lg:px-[90px] py-[80px] md:py-[100px] lg:py-[140px]'>
       {/* <div>
         <h2 className={`${playfair.className} text-[54px] text-[#172432]    `}>Popular Destinations</h2>

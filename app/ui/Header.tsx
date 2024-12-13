@@ -4,6 +4,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import Image from 'next/image'
 import logo from '../../public/Logo.png'
 import NavData from '../lib/NavData'
+import Link from 'next/link';
 
 const Header = () => {
   const [navState, setNavState] = useState(false)
@@ -12,6 +13,7 @@ const Header = () => {
     setNavState(!navState)
     console.log(navState);
   }
+
   return (
     <header className=' py-6 px-4 md:flex justify-between items-center'>
       <div className='flex justify-between'>
@@ -24,23 +26,14 @@ const Header = () => {
         </div>
       </div>
       
-      {/* <nav className={`md:gap-8 ${navState === false ? 'hidden md:flex' : 'grid md:flex'
-      }`}>
-        
-        {NavData.map((nav, index) => (
-            <a href={nav.path} key={index} className=' text-xl text-[#FFFFFF]'>
-              {nav.title}
-            </a>
-            
-        ))}
-      </nav> */}
 
       <nav className='hidden md:flex items-center md:gap-4 lg:gap-8'>
         
         {NavData.map((nav, index) => (
-            <a href={nav.path} key={index} className=' lg:text-xl text-[#FFFFFF]'>
+            <Link href={nav.path} key={index} className={` ${index === 0 ? 'border-b-[3px] border-[#FF7757]' : 'border-b-0'} lg:text-xl text-[#FFFFFF]`}
+            >
               {nav.title}
-            </a>
+            </Link>
             
         ))}
       </nav>
@@ -53,6 +46,7 @@ const Header = () => {
         <button className='bg-[#FF7757] text-white px-6 py-[16px] lg:px-8 lg:py-[20px] rounded-xl'>Sign Up</button>
       </div>
 
+        {/* mobile navbar */}
       <div
         className={`md:hidden items-end md:space-x-8 pt-12 pb-6 text-left ${
           navState
@@ -71,13 +65,14 @@ const Header = () => {
         {/* Navigation Items */}
         <ul className="flex flex-col space-y-6 divide-y divide-pry">
           {NavData.map((data, index) => (
-            <a
+            <Link
               href={data.path as string}
               key={index}
               className="text-lg font-semibold cursor-pointer pl-8 pt-6 text-[#FFFFFF]"
+              onClick={() => setNavState(false)}
             >
               {data.title}
-            </a>
+            </Link>
           ))}
         </ul>
 
