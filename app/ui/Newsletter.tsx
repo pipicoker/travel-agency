@@ -12,7 +12,7 @@ const Newsletter = () => {
     <motion.div
     initial={{ opacity: 0, y: 50 }} 
     whileInView={{ opacity: 1, y: 0 }} 
-    transition={{ duration: 1,  }}
+    transition={{ duration: 0.5,  }} viewport={{ once: true }}
      className='bg-[#FFFFFF] mx-4 lg:mx-[90px] px-5 py-10 md:px-10 md:py-[60px] lg:px-[80px]  border gap-[60px] grid  text-[#767E86] drop-shadow-md sm:flex sm:justify-between sm:items-center rounded-[20px] md:rounded-[26px] '>
         <p className={`${playfair.className} text-[40px] md:text-[54px] lg:text-[64px]`}>Our Newsletter</p>
 

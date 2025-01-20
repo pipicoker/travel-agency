@@ -17,7 +17,7 @@ const TripPlanners = () => {
     <motion.div 
     initial={{ opacity: 0, y: 50 }} 
     whileInView={{ opacity: 1, y: 0 }} 
-    transition={{ duration: 1,  }}
+    transition={{ duration: 0.5,  }} viewport={{ once: true }}
     id='planners'
     className='px-4 sm:pr-12 md:pr-0  lg:px-[90px]  pb-[80px] md:pb-[100px] lg:pb-[140px] grid lg:grid-cols-5 gap-8 lg:gap-20 lg:items-center '>
 
@@ -40,7 +40,7 @@ const TripPlanners = () => {
                 <motion.div key={index}
                 initial={{ opacity: 0, y: 50 }} 
                 whileInView={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 1,  delay: 0.5}}>
+                transition={{ duration: 0.5,  delay: 0.5}}  viewport={{ once: true }}>
                     <Image src={data.src} alt='picture of the place' className='h-[320px] sm:h-[350px] rounded-[26px] '/>
 
                     <div className='pt-3 grid gap-3'>

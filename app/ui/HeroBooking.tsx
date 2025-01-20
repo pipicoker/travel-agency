@@ -6,7 +6,7 @@ const HeroBooking = () => {
     <motion.div 
     initial={{ opacity: 0, y: 50 }} 
     whileInView={{ opacity: 1, y: 0 }} 
-    transition={{ duration: 1,  }}
+    transition={{ duration: 0.5,  }} viewport={{ once: true }}
     className='bg-[#FFFFFF] rounded-2xl mt-[100px] md:w-5/6 2xl:pl-[100px]  md:h-[216px] md:grid '>
         <form action="" className='grid md:flex md:justify-between'>
             <div className='p-5  grid md:grid-cols-2 xl:grid-cols-4 gap-10  md:items-center 2xl:pr-[100px] '>

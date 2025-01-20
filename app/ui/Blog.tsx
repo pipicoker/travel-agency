@@ -15,7 +15,7 @@ const Blog = () => {
     <motion.div 
     initial={{ opacity: 0, y: 50 }} 
     whileInView={{ opacity: 1, y: 0 }} 
-    transition={{ duration: 1,  }}
+    transition={{ duration: 0.5,  }} viewport={{ once: true }}
     id='blog'
     className='px-4 lg:px-[90px]  pb-[80px] md:pb-[100px] lg:pb-[140px]'>
         <Heading heading='Our Blog' description='An insight to the incredible experience in the world' buttons= {false}/>
