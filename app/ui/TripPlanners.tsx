@@ -40,7 +40,7 @@ const TripPlanners = () => {
                 <motion.div key={index}
                 initial={{ opacity: 0, y: 50 }} 
                 whileInView={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.5,  delay: 0.5}}  viewport={{ once: true }}>
+                transition={{ duration: 0.5,  delay: 0}}  viewport={{ once: true }}>
                     <Image src={data.src} alt='picture of the place' className='h-[320px] sm:h-[350px] rounded-[26px] '/>
 
                     <div className='pt-3 grid gap-3'>
